@@ -32,27 +32,22 @@ def find_mismatch(text):
 
 
 def main():
+    print("Input method I/F:")
     text = input()
 
     if "I" in text:
         text = input()
         mismatch = find_mismatch(text)
-
-        if not mismatch:
-            print("Success")
-        else:
-            print(mismatch)
+        print(mismatch)
 
     elif "F" in text:
         file = input()
         with open(file) as f:       
             line = file.readLine()
         mismatch = find_mismatch(line)
-
-        if not mismatch:
-            print("Success")
-        else:
-            print(mismatch)
+        print(mismatch)
+    else:
+        print("Error in input text")
 
     
     
